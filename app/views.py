@@ -1,26 +1,19 @@
 from flask import Flask, jsonify, request
 from products import products
+from app import app
 
-app = Flask(__name__)
-#Prueba de ruta
-@app.route('/test')
-def  test():
-    return jsonify({"mensaje": "Prueba de script"})
-#Petición de general de productos
 @app.route('/products')
 def get_products():
     return jsonify({"products": products, "message":"List of products" })
-#Petición de especifica de producto
+
 @app.route('/products/<string:product_name>')
 def get_product(product_name):
     product_found =[product for product in products 
                     if product['name'] == product_name ]
-    #print(product_name)
     if (len(product_found) >0):
         return jsonify({"product": product_found[0]})
     return jsonify({"message": "Product not found"})
 
-#Envio de datos
 @app.route('/products', methods=['POST'])
 def add_product():
     new_product ={
@@ -30,14 +23,9 @@ def add_product():
         "quality": request.json['quality']
     }
     products.append(new_product)
-    #print(request.json)
-    """
-    Retorna el prodcuto agregado
-    """
     return jsonify({"message":"Product Added Sucesafylly",
                      "products": products})
 
-#Actualización de datos
 @app.route('/products/<string:product_name>', methods=['PUT'])
 def update_produt(product_name):
     product_found =[product for product in products 
@@ -51,12 +39,8 @@ def update_produt(product_name):
             "message": "Product updated",
             "product": product_found[0]
        })
-    """
-    Retorna la optención de un producto para actualizar
-    """
     return jsonify({"message":"Product not found"})
 
-#Eliminación de datos
 @app.route('/products/<string:product_name>', methods=['DELETE'])
 def delete_product(product_name):
     product_found =[product for product in products 
@@ -67,10 +51,4 @@ def delete_product(product_name):
             "message": "Product deleted",
             "product": products
         })
-    """
-    Retorna la optención del producto a eliminar
-    """
     return jsonify({"message":"Product not found"})
-
-if __name__ == "__main__":
-    app.run(debug=True, port=4000)

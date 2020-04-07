@@ -1,7 +1,7 @@
 # API REST con Flask
 
-Flask es un framework escrito en paython que perimte hacer aplicaciones de una manera rapida y con pocas lineas de codigo.
-Una API es una interfaz grafica para la comunicación entre la aplicación y software que comparten datos entre ellos. Una API puede se publica que implica que cualquiera puede acceder a la informacíon y tambien puede ser privada, lo que implica que requiere autentificación y en la primera autentificación devuelve un token(obejto contendeor de datos de autentificación), si el token esta vigente no se pide autentificación y el formato para el token es JWT. REST es una arquitectura de desarrollo de APIs y la parte fundamental para el desarrollo de las misma, las operaciones fuandamentales son los metodos HTTP y son 4 GET(permite leer y consultar infomración), POST(permite crear nueva información),PUT(permite actualizar la información),DELETE(permite eliminar la información)
+Flask es un framework escrito en python que perimte hacer aplicaciones de una manera rápida y con pocas líneas de código.
+Una API es una interfaz grafica para la comunicación entre la aplicación y software que comparten datos entre ellos. Una API puede se publica que implica que cualquiera puede acceder a la informacíon y tambien puede ser privada, lo que implica que requiere autentificación y en la primera autentificación devuelve un token (Objeto contendeor de datos de autentificación), si el token esta vigente no se pide autentificación y el formato para el token es JWT. REST es una arquitectura de desarrollo de APIs y la parte fundamental para el desarrollo de las misma, las operaciones fuandamentales son los metodos HTTP y son 4 GET (permite leer y consultar información), POST (permite crear nueva información), PUT (permite actualizar la información), DELETE (permite eliminar la información).
 
 ## Requerimientos
 
@@ -10,7 +10,7 @@ Tambien se utlizo el software de [Imsomnia][1] para validar y comprobar los meto
 
 [1]: https://insomnia.rest/download/
 
-Adicionalmente se requieren bibliotecas adicionales como jsonify que permite convertir un obejto a un json y la la biblioteca de request la cual permite hacer solicitues HTTP y sean mas simples.
+Adicionalmente se requieren bibliotecas adicionales como jsonify que permite convertir un objeto a un json y la la biblioteca de request la cual permite hacer solicitues HTTP y sean mas simples.
 
 ## Instalación
 
@@ -18,9 +18,9 @@ Para instalar la versión estable con **pip**
 
 `$ pip install Flask`
 
-## Importanción de modulos
+## Importanción de módulos
 
-Importación de modulos
+Importación de módulos
 
 ```python
 from flask import Flask, jsonify, request
@@ -32,7 +32,7 @@ Para importar las clases necesarias
 from products import products
 ```
 
-## Inicio rapido
+## Inicio rápido
 
 Para este proyecto se va a utilizar un archivo desde el cual se va a extraer la información de una tienda de remate de electronicos, en los cuales se tiene distintos productos para oficina o de uso comun, se puede consultar el precio, la garantia tras salir de la tienda y la calidad del producto selecciónado.
 

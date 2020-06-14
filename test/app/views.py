@@ -34,7 +34,7 @@ def add_product():
     Retorna el prodcuto agregado
     """
     return jsonify({"message":"Product Added Sucesafylly",
-                     "products": products})
+                    "products": products})
 
 #Actualización de datos
 @app.route('/products/<string:product_name>', methods=['PUT'])
@@ -49,7 +49,7 @@ def update_produt(product_name):
         return jsonify ({
             "message": "Product updated",
             "product": product_found[0]
-       })
+        })
     """
     Retorna la optención de un producto para actualizar
     """

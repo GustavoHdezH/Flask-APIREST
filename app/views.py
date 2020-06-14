@@ -24,7 +24,7 @@ def add_product():
     }
     products.append(new_product)
     return jsonify({"message":"Product Added Sucesafylly",
-                     "products": products})
+                    "products": products})
 
 @app.route('/products/<string:product_name>', methods=['PUT'])
 def update_produt(product_name):
@@ -38,7 +38,7 @@ def update_produt(product_name):
         return jsonify ({
             "message": "Product updated",
             "product": product_found[0]
-       })
+        })
     return jsonify({"message":"Product not found"})
 
 @app.route('/products/<string:product_name>', methods=['DELETE'])

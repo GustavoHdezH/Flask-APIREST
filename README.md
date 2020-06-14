@@ -3,6 +3,11 @@
 Flask es un framework escrito en python que perimte hacer aplicaciones de una manera rápida y con pocas líneas de código.
 Una API es una interfaz grafica para la comunicación entre la aplicación y software que comparten datos entre ellos. Una API puede se publica que implica que cualquiera puede acceder a la informacíon y tambien puede ser privada, lo que implica que requiere autentificación y en la primera autentificación devuelve un token (Objeto contendeor de datos de autentificación), si el token esta vigente no se pide autentificación y el formato para el token es JWT. REST es una arquitectura de desarrollo de APIs y la parte fundamental para el desarrollo de las misma, las operaciones fuandamentales son los metodos HTTP y son 4 GET (permite leer y consultar información), POST (permite crear nueva información), PUT (permite actualizar la información), DELETE (permite eliminar la información).
 
+<p align="center">
+<a><img src=https://img.shields.io/badge/version-0.0.2-brightgreen><a>
+<a><img src="https://img.shields.io/badge/version%20doc-3.0-brightgreen"></a>
+</p>
+
 ## Requerimientos
 
 Python 3.8.2 y Flask 1.1.1 son actualmente compatibles con este proyecto.
@@ -145,3 +150,10 @@ def delete_product(product_name):
         })
     return jsonify({"message":"Product not found"})
 ```
+
+<p align="center">
+Codename : Aurora
+</p>
+<p align="center">
+Gustavo Hernandez  |  2020&copy;
+</p>

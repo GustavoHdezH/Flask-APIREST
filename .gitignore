@@ -1,0 +1,43 @@
+### Archivo de IDEs ###
+.idea/
+.vscode/
+.history/
+rest-client.env.json
+
+### Archivos Python ###
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Byte-compiled / optimized / archivos DLL
+__pycache__/
+*.py[cod]
+*.$py.class
+
+# Distribuciones / empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MAINFEST
+
+# Entornos
+.env
+.venv
+env/
+ENV/
+env.bak/
+venv.bak/
